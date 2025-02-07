@@ -2,7 +2,7 @@
 <img src ="https://github.com/theevilmysteriouspage/nyuworker/blob/main/nyu/logo.png?raw=true" width = 400 height = 400>
 A minimalist lightweight Godot text/dialog system. 
 
-I sought out to make my own text system because it was hard to find any barebones text systems for Godot. Essentially, this is meant to be a jack of most of trades (but out of the box master of none) system that you retrofit to your own project. The ideal use for this is simple visual novels, adventure games, and just games with a more novel formatting than what something like <a href= "https://github.com/dialogic-godot/dialogic">Dialogic</a> usually is best paired with.
+I sought out to make my own text system because it was hard to find any barebones text systems for Godot. Essentially, this is meant to be a jack of most of trades (but out of the box master of none) system that you retrofit to your own project. The ideal use for this is simple visual novels, adventure games, and just games with a more novel formatting than what something like <a href= "https://github.com/dialogic-godot/dialogic">Dialogic</a> usually is best paired with. Essentially this a framework that in most cases would require you to implement stuff yourself or be a good place to study how to make text systems.
 
 Features:<br><br>
 A general barebones scene that you can easily animate and move around<br><br>
@@ -12,6 +12,7 @@ Dialog is stored in an array which means no extra file clutter with dialog files
 
 Anti-Features:<br><br>
 No name tags. You just have to put who's speaking in the dialog itself...<br><br>
+No character portraits or character tracking in general<br><br>
 No pretty dedicated UI...<br><br>
 Any scene changing methods or any method outside of the dialog system itself needs to be dealt with BY YOU!!!<br><br>
 
