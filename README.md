@@ -9,6 +9,7 @@ A general barebones scene that you can easily animate and move around<br><br>
 Animated text/dialog with controllable animation speed<br><br>
 CG (picture graphic) service which animated transitions<br><br>
 Dialog is stored in an array which means no extra file clutter with dialog files (one of the main reasons I made this lol)<br><br>
+Text rollback (going back to previous lines)<br><br>
 
 Anti-Features:<br><br>
 No name tags. You just have to put who's speaking in the dialog itself...<br><br>
@@ -19,7 +20,7 @@ Any scene changing methods or any method outside of the dialog system itself nee
 
 # Documentation
 
-To get started, just unzip the latest release into your project wherever most suitable and drop nyuworker.tscn into your main scene and you're good to go!
+To get started, just unzip the latest release into your project wherever most suitable and drop nyuworker.tscn into your main scene and you're good to go! Make sure to go into input and create inputs for text_advance and text_rollback.
 
 Nyuworker only uses one script for now and I tried to make as much editable in the inspector as possible for easier on the fly property changes that don't affect every other instance of Nyuworker.
 
