@@ -1,2 +1,3 @@
-# nyuworker
-A minimalist lightweight Godot text/dialogue system
+# Nyuworker
+A minimalist lightweight Godot text/dialogue system.
+
