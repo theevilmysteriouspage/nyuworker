@@ -37,15 +37,19 @@ func _ready():
 	text_sound.stream = text_sound_file
 	display_text(0)
 	current_cg = 0 #might be necessary but we dont know... thats scary...
+	cg.texture = cg_list[current_cg]
 
 func display_text(line):
 	text.visible_characters = 0
 	animate_text = true
 	text.text = dialog_lines[line]
 	
+func method_on_exit(): #this is what tells it what to do after dialog is done
+	self.queue_free()
+	
 func change_cg():
 	cg_animationplayer.play(cg_animation)
-	get_tree().create_timer(cg_animationplayer.get_current_animation_length()/2)
+	await get_tree().create_timer(cg_animationplayer.get_current_animation_length()/2).timeout
 	current_cg = current_cg + 1
 	cg.texture = cg_list[current_cg]
 
@@ -72,8 +76,8 @@ func _process(delta):
 		print(current_cg)
 	
 	if Input.is_action_just_pressed("text_advance"):
-		if current_line == dialog_lines.size() - 1: #this makes sure you dont go over how many lines of dialog there are 
-			return
+		if current_line == dialog_lines.size() - 1 and Input.is_action_just_pressed("text_advance"): #this makes sure you dont go over how many lines of dialog there are 
+			method_on_exit()
 		else:
 			current_visible_characters = 0
 			current_line += 1
